@@ -7,7 +7,6 @@
 /**
 Plugin Name: Gravity Forms - Fattura24
 Description: Interfaccia fattura24 con un form di gravityform per generare automaticamente la fattura dal tuo account.
-Author: 
 Version: 0.1
  */
 require_once( 'titan-framework-checker.php' );
