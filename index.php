@@ -5,9 +5,9 @@
  */
 
 /**
-Plugin Name: Gravity Forms - Fattura24
-Description: Interfaccia fattura24 con un form di gravityform per generare automaticamente la fattura dal tuo account.
-Version: 0.1
+Plugin Name: Gravity Forms to Fattura24
+Description: Integrazione Fattura24 con un form di gravityform
+Version: 0.2
  */
 require_once( 'titan-framework-checker.php' );
 
@@ -108,6 +108,12 @@ function my_theme_create_options() {
 	'name' => 'ID campo form Totale Importo',
 	'id' => 'id_totale',
 	'type' => 'text',	
+	) );	
+
+	$panel->createOption( array(
+	'name' => 'ID campo Descrizione Servizio',
+	'id' => 'id_descrizione',
+	'type' => 'text',
 	) );		
 
 	$panel->createOption( array(

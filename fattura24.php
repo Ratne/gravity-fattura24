@@ -139,6 +139,8 @@ function create_fattura24($entry, $action) {
 			$cod_fisc=rgar( $entry, $titan->getOption( 'id_cod_fisc' ));
 			$citta=rgar( $entry, $titan->getOption( 'id_citta' ));
 			$provincia=rgar( $entry, $titan->getOption( 'id_provincia' ));
+			$descrizione=rgar( $entry, $titan->getOption( 'id_descrizione' ));
+			
 			
 			$netto=$totale/1.22;
 			$iva=$totale-$netto;
@@ -251,7 +253,7 @@ function create_fattura24($entry, $action) {
 				
 					$xml->startElement('Rows');
 						$xml->startElement('Row');
-							$xml->writeElement('Description', 'descrizione');
+							$xml->writeElement('Description', $descrizione);
 
 							$xml->writeElement('Qty', 1);
 							$xml->writeElement('Price', number_format($netto,2,".",""));
