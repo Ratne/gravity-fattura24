@@ -227,7 +227,7 @@ function create_fattura24($entry, $action) {
 				$xml->writeElement('DocumentType','I-force');
 				$xml->writeElement('SendEmail', 'true');		
 				$xml->writeElement('IdTemplate', '5163');		
-				$xml->writeElement('Object', 'servizio intermediazione disbrigo pratica');
+				$xml->writeElement('Object', 'OGGETTODELLAFATTURA');
 				
 				foreach($customerData as $k => $v)
 				{
